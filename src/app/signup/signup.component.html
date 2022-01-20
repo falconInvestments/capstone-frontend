@@ -1,0 +1,23 @@
+<h2>This is the signup component heading.</h2>
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+  <label for="firstName"></label>
+  <input type="text" name="firstName" ngModel placeholder="First name" />
+  <label for="lastName"></label>
+  <input type="text" name="lastName" ngModel placeholder="Last name" />
+  <label for="email"></label>
+  <input type="email" name="email" ngModel placeholder="Email address" />
+  <label for="password"></label>
+  <input type="password" name="password" ngModel placeholder="Password" />
+  <label for="confirmPassword"></label>
+  <input
+    type="password"
+    name="confirmPassword"
+    ngModel
+    placeholder="Confirm password"
+  />
+  <button type="submit">Create new user</button>
+</form>
+
+<div *ngIf="userResponse">
+  {{ userResponse }}
+</div>
