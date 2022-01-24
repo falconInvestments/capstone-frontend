@@ -20,4 +20,12 @@ export class FormService {
 
     return this.http.post(baseUrl + '/signup', newUser);
   }
+
+  submitSignin(formValues: any): Observable<any> {
+    const userCredentials = {
+      email: formValues.email,
+      password: formValues.password,
+    };
+    return this.http.post(baseUrl + '/signin', userCredentials);
+  }
 }

@@ -15,7 +15,6 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
-    console.log('Form submission:', form.value);
     this.formService.submitSignup(form.value).subscribe((response) => {
       this.userResponse = response;
     });
