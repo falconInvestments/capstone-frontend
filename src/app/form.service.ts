@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = 'http://localhost:3000/api/users';
+const baseUrl = 'https://falconInvestments.herokuapp.com';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +10,14 @@ const baseUrl = 'http://localhost:3000/api/users';
 export class FormService {
   constructor(private http: HttpClient) {}
 
-  submitSignup(formValues: JSON): Observable<any> {
-    return this.http.post(baseUrl, formValues);
+  submitSignup(formValues: any): Observable<any> {
+    const newUser = {
+      firstName: formValues.firstName,
+      lastName: formValues.lastName,
+      email: formValues.email,
+      password: formValues.password,
+    };
+
+    return this.http.post(baseUrl + '/signup', newUser);
   }
 }

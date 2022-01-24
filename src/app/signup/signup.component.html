@@ -1,23 +1,45 @@
 <h2>This is the signup component heading.</h2>
 <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
   <label for="firstName"></label>
-  <input type="text" name="firstName" ngModel placeholder="First name" />
+  <input
+    type="text"
+    name="firstName"
+    [(ngModel)]="signupForm.value.firstName"
+    placeholder="First name"
+  />
   <label for="lastName"></label>
-  <input type="text" name="lastName" ngModel placeholder="Last name" />
+  <input
+    type="text"
+    name="lastName"
+    [(ngModel)]="signupForm.value.lastName"
+    placeholder="Last name"
+  />
   <label for="email"></label>
-  <input type="email" name="email" ngModel placeholder="Email address" />
+  <input
+    type="email"
+    name="email"
+    [(ngModel)]="signupForm.value.email"
+    placeholder="Email address"
+  />
   <label for="password"></label>
-  <input type="password" name="password" ngModel placeholder="Password" />
+  <input
+    type="password"
+    name="password"
+    [(ngModel)]="signupForm.value.password"
+    placeholder="Password"
+  />
   <label for="confirmPassword"></label>
   <input
     type="password"
     name="confirmPassword"
-    ngModel
+    [(ngModel)]="signupForm.value.confirmPassword"
     placeholder="Confirm password"
   />
-  <button type="submit">Create new user</button>
+  <input type="submit" value="Create new user" />
 </form>
 
 <div *ngIf="userResponse">
-  {{ userResponse }}
+  Welcome to Falcon Investments, {{ userResponse.firstName }}!<br />
+  Your user ID is {{ userResponse.id }}. And your password was encrypted:<br />
+  {{ userResponse.password }}
 </div>
