@@ -4,12 +4,14 @@ import { CertificatesListComponent } from './certificates-list/certificates-list
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'certificates-list', component: CertificatesListComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({

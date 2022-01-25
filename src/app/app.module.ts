@@ -17,7 +17,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
-import { CookieService } from 'ngx-cookie-service'
+import { CookieService } from 'ngx-cookie-service';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { CookieService } from 'ngx-cookie-service'
     SigninComponent, 
     SignupComponent, 
     CertificatesListComponent, 
-    HomeComponent
+    HomeComponent, DashboardComponent
   ],
   imports: [
     BrowserModule, 
