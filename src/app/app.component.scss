@@ -1,0 +1,17 @@
+mat-toolbar {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    background-color: #034F39;
+    color: white;
+    mat-toolbar-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left-bar h1 {
+            display: inline-block;
+            font-size: 30px;
+        }
+    }
+}
+
