@@ -18,7 +18,11 @@ export class SigninComponent implements OnInit {
 
   onSubmit(form: NgForm) {
     this.formService.submitSignin(form.value).subscribe((response) => {
-      console.log(response); // Plan: response should include both user ID and session ID
+      /*
+      response should be in this format:
+      { userId: <number>, sessionId: <string> }
+      which is then stored in the cookie with the key "falcon.sid"
+      */
       this.cookieService.set('falcon.sid', response);
       // this.cookieValue = this.cookieService.get('falcon.sid');
     });
