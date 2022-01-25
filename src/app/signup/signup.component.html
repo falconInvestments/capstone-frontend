@@ -1,42 +1,55 @@
-<h2>This is the signup component heading.</h2>
-<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
-  <label for="firstName">First name: </label>
-  <input
-    type="text"
-    name="firstName"
-    [(ngModel)]="signupForm.value.firstName"
-    placeholder="First name"
-  />
-  <label for="lastName">Last name: </label>
-  <input
-    type="text"
-    name="lastName"
-    [(ngModel)]="signupForm.value.lastName"
-    placeholder="Last name"
-  />
-  <label for="email">Email address: </label>
-  <input
-    type="email"
-    name="email"
-    [(ngModel)]="signupForm.value.email"
-    placeholder="Email address"
-  />
-  <label for="password">Password: </label>
-  <input
-    type="password"
-    name="password"
-    [(ngModel)]="signupForm.value.password"
-    placeholder="Password"
-  />
-  <label for="confirmPassword">Confirm password: </label>
-  <input
-    type="password"
-    name="confirmPassword"
-    [(ngModel)]="signupForm.value.confirmPassword"
-    placeholder="Confirm password"
-  />
-  <input type="submit" value="Create new user" />
-</form>
+<div class="container">
+  <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <h2>Create an Account</h2>
+
+    <div class="input-field">
+      <label for="firstName">First name: </label>
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="signupForm.value.firstName"
+        placeholder="First name"
+      />
+    </div>
+    <div class="input-field">
+      <label for="lastName">Last name: </label>
+      <input
+        type="text"
+        name="lastName"
+        [(ngModel)]="signupForm.value.lastName"
+        placeholder="Last name"
+      />
+    </div>
+    <div class="input-field">
+      <label for="email">Email address: </label>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="signupForm.value.email"
+        placeholder="Email address"
+      />
+    </div>
+    <div class="input-field">
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="signupForm.value.password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="input-field">
+      <label for="confirmPassword">Confirm password: </label>
+      <input
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="signupForm.value.confirmPassword"
+        placeholder="Confirm password"
+      />
+    </div>
+    <input type="submit" id="submit" value="Create new user" />
+  </form>
+</div>
 
 <div *ngIf="userResponse">
   Welcome to Falcon Investments, {{ userResponse.firstName }}!<br />
