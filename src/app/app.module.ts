@@ -8,11 +8,17 @@ import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { CertificatesListComponent } from './certificates-list/certificates-list.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
-  declarations: [AppComponent, SigninComponent, SignupComponent, CertificatesListComponent],
+  declarations: [
+    AppComponent,
+    SigninComponent,
+    SignupComponent,
+    CertificatesListComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
