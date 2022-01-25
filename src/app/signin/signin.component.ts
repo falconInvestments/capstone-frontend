@@ -23,7 +23,7 @@ export class SigninComponent implements OnInit {
       { userId: <number>, sessionId: <string> }
       which is then stored in the cookie with the key "falcon.sid"
       */
-      this.cookieService.set('falcon.sid', response);
+      this.cookieService.set('falcon.sid', JSON.stringify(response));
       // this.cookieValue = this.cookieService.get('falcon.sid');
     });
   }

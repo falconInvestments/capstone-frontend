@@ -10,35 +10,35 @@ import { SignupComponent } from './signup/signup.component';
 import { CertificatesListComponent } from './certificates-list/certificates-list.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
-import { CookieService } from 'ngx-cookie-service'
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    SigninComponent, 
-    SignupComponent, 
-    CertificatesListComponent, 
-    HomeComponent
+    AppComponent,
+    SigninComponent,
+    SignupComponent,
+    CertificatesListComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule, 
-    AppRoutingModule, 
-    FormsModule, 
-    HttpClientModule, 
-    BrowserAnimationsModule, 
-    MatToolbarModule, 
-    MatIconModule, 
-    MatSidenavModule, 
-    MatListModule, 
-    MatButtonModule, 
-    LayoutModule
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    MatButtonModule,
+    LayoutModule,
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
