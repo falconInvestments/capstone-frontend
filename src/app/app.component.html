@@ -1,9 +1,8 @@
+<!-- Navbar -->
 <mat-toolbar>
   <mat-toolbar-row>
     <div class="left-bar">
-
       <h1>Falcon Investments</h1>
-
     </div>
     <span class="menu-spacer"></span>
     <div>
@@ -18,24 +17,37 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
+<!-- SideNav -->
+
 <mat-sidenav-container>
   <mat-sidenav #sidenav position="end">
     <mat-nav-list>
-
       <a mat-list-item> Accounts </a>
       <a mat-list-item> Stocks </a>
       <a mat-list-item> Mutual Funds </a>
       <a mat-list-item> ETFs </a>
       <a mat-list-item> Feedback </a>
       <a mat-list-item> Retirement Calculator </a>
-      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-
+      <a mat-list-item (click)="sidenav.toggle()" href="" mat-list-item
+        >Close</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 88vh;">
-
+    <div style="height: 88vh">
       <router-outlet></router-outlet>
+      <!-- footer -->
+      <footer>
+        <div class="container">
+          <p>Copyright &copy; 2022 All Rights Reserved by Falcon Investments</p>
+          <div>
+            <a routerLink="/home">Home</a>
+            <a routerLink="/dashboard/1">Dashboard</a>
+            <a routerLink="/home">Login</a>
+            <a routerLink="/create-ira">Create Account</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
