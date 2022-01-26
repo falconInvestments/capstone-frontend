@@ -1,7 +1,10 @@
+import { state } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { FormService } from '../form.service';
+import { UserStore } from '../store/user.store';
 
 @Component({
   selector: 'app-signin',
@@ -10,8 +13,10 @@ import { FormService } from '../form.service';
 })
 export class SigninComponent implements OnInit {
   constructor(
+    private router: Router,
     private formService: FormService,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private userStore: UserStore
   ) {}
 
   ngOnInit(): void {}
@@ -25,6 +30,18 @@ export class SigninComponent implements OnInit {
       */
       this.cookieService.set('falcon.sid', JSON.stringify(response));
       // this.cookieValue = this.cookieService.get('falcon.sid');
+      this.userStore.setState({
+        ...this.userStore.state,
+        isSignedIn: true,
+        currentUser: {
+          ...this.userStore.state.currentUser,
+          id: response.userId,
+        },
+      });
     });
+    this.userStore.state$.subscribe((contents) => {
+      console.log('Current userStore contents:', contents);
+    });
+    this.router.navigate(['/dashboard']);
   }
 }
