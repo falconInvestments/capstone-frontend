@@ -12,9 +12,35 @@ mat-toolbar {
             display: inline-block;
             font-size: 30px;
         }
+        a {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+        }
     }
 }
 
 mat-sidenav-content {
     background-color: #EDE7D0;
+}
+
+.container {
+    min-height: 100px;
+    border-top: 1px solid black;
+    text-align: center;
+    p {
+        display: block;
+        margin: 20px;
+    }
+    a {
+        padding: 0 10px;
+        color: black;
+    }
+    a:hover {
+        color: navy;
+    }
+}
+
+h1 {
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
