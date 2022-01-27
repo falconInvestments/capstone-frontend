@@ -22,15 +22,19 @@ import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { StocksComponent } from './stocks/stocks.component';
 
+import { UserStore } from './store/user.store';
+
+
 @NgModule({
   declarations: [
-    AppComponent, 
-    SigninComponent, 
-    SignupComponent, 
-    CertificatesListComponent, 
+    AppComponent,
+    SigninComponent,
+    SignupComponent,
+    CertificatesListComponent,
     HomeComponent,
     DashboardComponent,
     StocksComponent
+
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { StocksComponent } from './stocks/stocks.component';
     LayoutModule,
 
   ],
-  providers: [CookieService],
+  providers: [CookieService, UserStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

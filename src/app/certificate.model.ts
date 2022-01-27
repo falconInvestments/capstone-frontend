@@ -4,4 +4,5 @@ export interface Certificate {
   interestRate: number;
   startDate: Date;
   maturityDate: Date;
+  userId: number;
 }
