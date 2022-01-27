@@ -2,9 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-const baseUrl = `https://api.polygon.io/v1/open-close/AAPL/2022-01-24?adjusted=true&apiKey=lMnC0fGVROfB2pPYLnH97iyDxzqtlD8z`;
-// FOR TESTING //
-// const baseUrl = 'http://localhost:3000';
 
 @Injectable({
   providedIn: 'root',

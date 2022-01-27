@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StocksComponent } from './stocks/stocks.component';
 
 import { UserStore } from './store/user.store';
+import { StocksComponent } from './stocks/stocks.component';
 
 
 @NgModule({
