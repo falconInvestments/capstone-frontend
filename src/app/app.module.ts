@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
@@ -19,6 +20,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StocksComponent } from './stocks/stocks.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     SignupComponent, 
     CertificatesListComponent, 
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    StocksComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatListModule,
     MatButtonModule,
     LayoutModule,
+
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],
