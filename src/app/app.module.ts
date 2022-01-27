@@ -20,6 +20,7 @@ import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserStore } from './store/user.store';
+import { StocksComponent } from './stocks/stocks.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { UserStore } from './store/user.store';
     CertificatesListComponent,
     HomeComponent,
     DashboardComponent,
+    StocksComponent
   ],
   imports: [
     BrowserModule,
