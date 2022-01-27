@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SigninComponent } from './signin/signin.component';
@@ -19,8 +20,11 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { StocksComponent } from './stocks/stocks.component';
+
 import { UserStore } from './store/user.store';
 import { StocksComponent } from './stocks/stocks.component';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { StocksComponent } from './stocks/stocks.component';
     HomeComponent,
     DashboardComponent,
     StocksComponent
+
   ],
   imports: [
     BrowserModule,
@@ -44,6 +49,7 @@ import { StocksComponent } from './stocks/stocks.component';
     MatListModule,
     MatButtonModule,
     LayoutModule,
+
   ],
   providers: [CookieService, UserStore],
   bootstrap: [AppComponent],
