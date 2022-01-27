@@ -39,9 +39,6 @@ export class SigninComponent implements OnInit {
         },
       });
     });
-    this.userStore.state$.subscribe((contents) => {
-      console.log('Current userStore contents:', contents);
-    });
     this.router.navigate(['/dashboard']);
   }
 }

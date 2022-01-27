@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserStore } from '../store/user.store';
 import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -16,11 +17,19 @@ export class DashboardComponent implements OnInit {
     email: '',
   };
 
-  constructor(private userStore: UserStore) {}
+  constructor(private userStore: UserStore, private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userStore.state$.subscribe((state) => {
-      this.currentUser = state.currentUser;
+    const userSubscription = this.userStore.state$.subscribe((state) => {
+      if (state.currentUser.id) {
+        this.userService.retrieveUserDetails(state.currentUser.id);
+        this.currentUser = state.currentUser;
+        if (this.currentUser.email) {
+          this.isSignedIn = state.isSignedIn;
+          userSubscription.unsubscribe();
+        }
+      } else {
+      }
     });
   }
 }
