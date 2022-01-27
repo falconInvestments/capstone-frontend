@@ -50,9 +50,3 @@
     <input type="submit" id="submit" value="Create new user" />
   </form>
 </div>
-
-<div *ngIf="userResponse">
-  Welcome to Falcon Investments, {{ userResponse.firstName }}!<br />
-  Your user ID is {{ userResponse.id }}. And your password was encrypted:<br />
-  {{ userResponse.password }}
-</div>

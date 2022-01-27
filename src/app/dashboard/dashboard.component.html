@@ -1,1 +1,9 @@
 <p>dashboard works!</p>
+
+<div *ngIf="isSignedIn">
+  Welcome back!<br />
+  User ID: {{ currentUser.id }}<br />
+  First name: {{ currentUser.firstName }}<br />
+  Last name: {{ currentUser.lastName }}<br />
+  Email address: {{ currentUser.email }}
+</div>

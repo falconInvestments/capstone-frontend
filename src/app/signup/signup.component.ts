@@ -8,15 +8,11 @@ import { FormService } from '../form.service';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
-  userResponse: any = null;
-
   constructor(private formService: FormService) {}
 
   ngOnInit(): void {}
 
   onSubmit(form: NgForm) {
-    this.formService.submitSignup(form.value).subscribe((response) => {
-      this.userResponse = response;
-    });
+    this.formService.submitSignup(form.value).subscribe();
   }
 }

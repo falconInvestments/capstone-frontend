@@ -19,15 +19,16 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { HomeComponent } from './home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserStore } from './store/user.store';
 
 @NgModule({
   declarations: [
-    AppComponent, 
-    SigninComponent, 
-    SignupComponent, 
-    CertificatesListComponent, 
+    AppComponent,
+    SigninComponent,
+    SignupComponent,
+    CertificatesListComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +43,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     LayoutModule,
   ],
-  providers: [CookieService],
+  providers: [CookieService, UserStore],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

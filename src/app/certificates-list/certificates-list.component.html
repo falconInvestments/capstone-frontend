@@ -1,6 +1,6 @@
 <p>certificates-list works!</p>
 
-<div *ngFor="let certificate of certificates">
+<div *ngFor="let certificate of userCertificates">
   <h2>Starting amount: {{ certificate.initialAmount }}</h2>
   <h3>Starting date: {{ certificate.startDate | date: "medium" }}</h3>
 </div>
