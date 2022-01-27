@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StocksComponent } from './stocks/stocks.component';
 
 import { UserStore } from './store/user.store';
+import { SignoutButtonComponent } from './signout-button/signout-button.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { UserStore } from './store/user.store';
     CertificatesListComponent,
     HomeComponent,
     DashboardComponent,
-    StocksComponent
+    StocksComponent,
+    SignoutButtonComponent
 
   ],
   imports: [
